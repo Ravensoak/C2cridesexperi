@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2C 2026 - Accommodation</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="icon" href="graphics/favicon-32x32.png" type="image/png">
+    <meta name="theme-color" content="#1f2a36">
+    <!-- other tags -->
+  </head>
+ 
+  <style>
+
+    #footer-placeholder {
+      margin-top: auto;
+      width: 100%; 
+    }
+    .hotel-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 10px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .hotel-card {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hotel-card img {
+      width: 100%;
+      height: auto;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .hotel-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.2rem;
+    }
+
+    .hotel-card p {
+      margin: 5px 0;
+      font-size: 0.95rem;
+    }
+
+    .hotel-card a {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hotel-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 500px) {
+
+      /* Mobile: 2-column layout */
+      .hotel-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .hotel-card {
+        padding: 10px;
+      }
+
+      .hotel-card h3 {
+        font-size: 1rem;
+      }
+
+      .hotel-card p {
+        font-size: 0.9rem;
+      }
+    }
+
+    
+    @media (max-width: 320px) {
+      /* Ultra-narrow: fallback to single column */
+      .hotel-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+  
+
+  <body>
+    <header class="main-header">
+      <!-- Hamburger toggle -->
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+      <!-- Mobile slide-out menu -->
+      <nav class="mobile-menu" aria-label="Mobile Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="meals.html">Meals</a></li>
+          <li><a href="routes.html">Routes</a></li>
+        </ul>
+      </nav>
+      <!-- Overlay -->
+      <div class="menu-overlay"></div>
+
+      <!-- Desktop navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="meals.html">Meals</a></li>
+          <li><a href="routes.html">Routes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="title-with-lines">
+      <!-- <hr class="fade-in delay-1"> -->
+      <hr>
+        <h1>Accommodation</h1>
+      <hr>
+    </div>
+    <p class="centered-summary">
+      Listed below is our accommodation for the 4-5 days. For the first and last night, the group will be split across the Manor and Caer Rhur Hall hotels, but will join together at the Manor for the evening meal
+    </p>
+
+  
+    <div class="hotel-container">
+
+      <div class="hotel-card">
+        <img src="pictures/The-Manor.jpg" alt="The Manor, Conwy">
+        <h3>The Manor</h3>
+        <p><strong>Address:</strong> Gorse Hill Caravan Park, Trefriw Road, Conwy, LL32 8HJ</p>
+        <p>A beautifully restored 19th-century manor house. It blends historic charm with oak-panelled fireplaces and real fires with a contemporary feel and luxurious en-suite rooms.</p>
+        <p><a href="https://www.themanorconwy.co.uk/" target="_blank">Visit Website</a></p>
+      </div>
+
+      <div class="hotel-card">
+        <img src="pictures/Caer-Rhun-Hotel.jpg" alt="Caer Rhur Hall Hotel, Conwy">
+        <h3>Caer Rhur Hall Hotel</h3>
+        <p><strong>Address:</strong> Caer Rhun Hall Hotel, Conwy LL32 8HX</p>
+        <p>A stunning Victorian manor nestled in the lush countryside of Conwy. Surrounded by 18 acres of gardens and the dramatic beauty of Snowdonia, it offers a tranquil escape with elegant rooms, modern amenities, and timeless charm.</p>
+        <p><a href="https://caerrhun.co.uk/the-hotel" target="_blank">Visit Website</a></p>
+      </div>
+
+      <div class="hotel-card">
+        <img src="pictures/The-Lion-Hotel.png" alt="The Lion Hotel, Criccieth">
+        <h3>The Lion Hotel</h3>
+        <p><strong>Address:</strong> Y Maes, Criccieth, Gwynedd LL52 0AA</p>
+        <p>Located near Criccieth Castle, this welcoming hotel offers scenic views and comfortable rooms.</p>
+        <p><a href="https://www.lionhotelcriccieth.co.uk" target="_blank">Visit Website</a></p>
+      </div>
+
+      <div class="hotel-card">
+        <img src="pictures/Nanhoron-Hotel.png" alt="The Nanhoron Arms, Nefyn">
+        <h3>The Nanhoron Arms</h3>
+        <p><strong>Address:</strong> St Davids Road, Nefyn, Pwllheli, Gwynedd LL53 6EA</p>
+        <p>A family-friendly hotel near the beach, offering hearty meals and a relaxed atmosphere on the Llyn Peninsula.</p>
+        <p><a href="https://www.nanhoronhotel.com" target="_blank">Visit Website</a></p>
+      </div>
+
+      <div class="hotel-card">
+        <img src="pictures/Bull-Inn.png" alt="The Bull's Head Inn, Beaumaris">
+        <h3>The Bull's Head Inn</h3>
+        <p><strong>Address:</strong> Castle Street, Beaumaris, Anglesey LL58 8AP</p>
+        <p>A Grade II-listed inn with centuries of history, offering stylish rooms and seasonal Welsh cuisine.</p>
+        <p><a href="https://www.inncollectiongroup.com/bulls-head-inn" target="_blank">Visit Website</a></p>
+      </div>
+
+    </div>
+    
+    <div id="footer-placeholder"></div>
+
+     <!-- Floating Refresh Button -->
+    <button id="refreshButton" title="Refresh">🔄</button>
+
+  <script>
+    const btn = document.getElementById('refreshButton');
+    let hideTimer;
+
+    // Only show when running as a standalone PWA
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      btn.style.display = 'flex';
+      setTimeout(() => btn.classList.add('visible'), 100);
+
+      // Reload when tapped
+      btn.addEventListener('click', () => window.location.reload());
+
+      // Hide after 5 seconds of inactivity
+      function resetHideTimer() {
+        btn.classList.add('visible');
+        clearTimeout(hideTimer);
+        hideTimer = setTimeout(() => btn.classList.remove('visible'), 5000);
+      }
+
+      // Detect activity (tap, scroll, move)
+      ['mousemove', 'scroll', 'touchstart'].forEach(evt =>
+        document.addEventListener(evt, resetHideTimer)
+      );
+
+      resetHideTimer(); // start hiding timer
+    }
+  </script>
+  </body>
+
+  <script>
+    // JavaScript for toggling mobile menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+    }); 
+
+     function loadComponent(selector, url, fallbackHTML = '') {
+    const container = document.querySelector(selector);
+    if (!container) return;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) throw new Error(`Failed to load ${url}`);
+        return response.text();
+      })
+      .then(html => {
+        container.innerHTML = html;
+      })
+      .catch(error => {
+        console.warn(`Component load failed: ${url}`, error);
+        container.innerHTML = fallbackHTML;
+      });
+  }
+  /* New code for standard footer */
+  loadComponent('#footer-placeholder', 'footer.html', `
+    <footer>
+      <div class="footer-content">
+        <span class="footer-text">© C2C Rides</span>
+      </div>
+    </footer>
+  `);
+  </script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
